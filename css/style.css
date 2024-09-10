@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --text--color: #fff;
+    --bg--color : #000;
+    --container--bg : #101720;
+    --font--size: 1.2rem;
+    --box--shadow: #0000001a;
+    --accent--color: #222;
+    --title--color: #ee82ee;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg--color);
+    color: var(--text--color);
+    height: 100vh;
+    margin: 0;
+}
+.account-container {
+    background: var(--container--bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 var(--box--shadow), 0 6px 20px 0 var(--box--shadow);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+}
+h1 {
+    color: var(--title--color);
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 13px;
+}
+input[type="number"] {
+    width: 100%;
+    background: var(--bg--color);
+    color: var(--text--color);
+    font-size: var(--font--size);
+    padding: 15px 15px;
+    letter-spacing: 1.7px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    transition: border 0.5s ease-in;
+}
+
+input[type="number"]:focus {
+    border: 1px solid lime;
+}
+
+input[type="number"]::placeholder {
+    color: var(--text--color);
+}
+
+button {
+    padding: 15px 30px;
+    background-color: var(--accent--color);
+    border: none;
+    outline: 0;
+    font-size: var(--font--size);
+    color: var(--text--color);
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 12px;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+button:nth-child(2) {
+    background: #0D0D19;
+}
+
+button:hover:nth-last-of-type(1) {
+    background: #0D0D19;
+    transform: translateY(-5px);
+}
+
+button:hover:nth-last-child(2) {
+    background-color: var(--bg--color);
+    transform: translateY(-5px);
+}
+.balance-card {
+    background-color: var(--container--bg);
+    border: 2px solid #00838f;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 1.8px;
+    color: #00838f;
+}
+
+ .popup {
+    display: none;
+    background-color: var(--container--bg);
+    color: var(--text--color);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 23px;
+}
+.popup.show {
+    display: block;
+}
